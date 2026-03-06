@@ -12,7 +12,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- font  -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- link favicon  -->
     <link
       rel="shortcut icon"
@@ -23,9 +29,9 @@
   </head>
   <body>
     <!-- header section  -->
-    <nav class="w-11/12 mx-auto">
+    <nav class="w-11/12 mx-auto sticky top-0 z-50">
       <div
-        class="bg-white border-b-3 border-gray-100 px-4  py-3 flex flex-wrap items-center justify-between sticky top-0 z-50"
+        class="bg-white border-b-3 border-gray-100 px-4 py-3 flex flex-wrap items-center justify-between"
       >
         <div class="flex items-center gap-2 p-3">
           <div class="w-8 h-8 flex items-center justify-center">
@@ -46,56 +52,82 @@
           </div>
 
           <button
-            class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-md transition-colors">
+            class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-md transition-colors"
+          >
             +New Issue
           </button>
         </div>
       </div>
     </nav>
-<!-- btn or  Iscsues section   -->
-<div class="max-w-7xl mx-auto px-4 py-6 space-y-4">
-    
-    <div class="bg-white p-3 rounded-lg border border-gray-100 shadow-sm">
+    <!-- btn or card qunti section   -->
+    <div class="max-w-7xl mx-auto px-4 py-6 space-y-4">
+      <div class="bg-white p-3 rounded-lg border border-gray-100 shadow-sm">
         <div class="flex gap-2 p-4">
-            <button class="btn btn-sm bg-[#6322FF] hover:bg-[#521ee0] text-white border-none px-8 normal-case">All</button>
-            <button class="btn btn-sm btn-ghost text-gray-500 hover:bg-gray-100 px-8 border border-gray-100 normal-case">Open</button>
-            <button class="btn btn-sm btn-ghost text-gray-500 hover:bg-gray-100 px-8 border border-gray-100 normal-case">Closed</button>
+          <button
+          id="btn-all"
+            class="btn btn-sm bg-[#6322FF]  text-white border-none px-8 normal-case"
+          >
+            All
+          </button>
+          <button
+          id="btn-open"
+            class="btn btn-sm btn-ghost text-gray-500  px-8 border border-gray-100 normal-case"
+          >
+            Open
+          </button>
+          <button
+          id="btn-closed"
+            class="btn btn-sm btn-ghost text-gray-500  px-8 border border-gray-100 normal-case"
+          >
+            Closed
+          </button>
         </div>
-    </div>
+      </div>
 
-    <div class="bg-white p-5 rounded-t-xl border border-gray-100 shadow-sm flex items-center justify-between">
-        
+      <div
+        class="bg-white p-5 rounded-t-xl border border-gray-100 shadow-sm flex items-center justify-between"
+      >
         <div class="flex items-center gap-4">
-            <div class="w-10 h-10 bg-indigo-50 text-[#6322FF] rounded-full flex items-center justify-center">
-              <img src="/assets/Aperture.png" alt="">
-            </div>
-            <div>
-                <h2 class="text-xl font-bold text-slate-800 leading-none"><span>50</span> Issues</h2>
-                <p class="text-sm text-slate-400 mt-1">Track and manage your project issues</p>
-            </div>
+          <div
+            class="w-10 h-10 bg-indigo-50 text-[#6322FF] rounded-full flex items-center justify-center"
+          >
+            <img src="/assets/Aperture.png" alt="" />
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-slate-800 leading-none">
+              <span id="quntti">50</span> Issues
+            </h2>
+            <p class="text-sm text-slate-400 mt-1">
+              Track and manage your project issues
+            </p>
+          </div>
         </div>
 
         <div class="flex items-center gap-6">
-            <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 bg-emerald-400 rounded-full"></span>
-                <span class="text-sm font-medium text-slate-600">Open</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <span class="w-[10px] h-[10px] bg-purple-500 rounded-full"></span>
-                <span class="text-sm font-medium text-slate-600">Closed</span>
-            </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 bg-emerald-400 rounded-full"></span>
+            <span class="text-sm font-medium text-slate-600">Open</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-[10px] h-[10px] bg-purple-500 rounded-full"></span>
+            <span class="text-sm font-medium text-slate-600">Closed</span>
+          </div>
         </div>
-
+      </div>
     </div>
-
-</div>
-<!-- card section  -->
- <div class="max-w-7xl mx-auto px-4">
-    <div  id="all-img" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-    <!-- all card assa akany  -->
-
+    <!-- card section  -->
+    <div class="max-w-7xl mx-auto px-4">
+      <div
+        id="all-img"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+      >
+        <!-- all card assa akany  -->
+      </div>
+      <!-- looding  -->
+        <div id="loading" class="flex hidden justify-center items-center">
+            <span class="loading loading-spinner loading-xl"></span>
+         </div>
     </div>
-</div>
-<script src="home.js"></script>
+    <script src="home.js"></script>
   </body>
 </html>
