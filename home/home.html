@@ -1,17 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- link D && T  -->
-     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-     <!-- link favicon  -->
-    <link rel="shortcut icon" href="/assets/Open-Status.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link favicon  -->
+    <link
+      rel="shortcut icon"
+      href="/assets/Open-Status.png"
+      type="image/x-icon"
+    />
     <title>Home</title>
-</head>
-<body>
-    <h1>Hi im a arman</h1>
+  </head>
+  <body>
+    <!-- header section  -->
+    <nav class="w-11/12 mx-auto">
+      <div
+        class="bg-white border-b-3 border-gray-100 px-4  py-3 flex flex-wrap items-center justify-between sticky top-0 z-50"
+      >
+        <div class="flex items-center gap-2 p-3">
+          <div class="w-8 h-8 flex items-center justify-center">
+            <img src="/assets/github-logo.png" alt="GitHub Logo" />
+          </div>
+          <span class="font-bold text-slate-800 text-lg tracking-tight"
+            >GitHub Issues Tracker</span
+          >
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="sm:block">
+            <input
+              type="text"
+              placeholder="Search issues..."
+              class="bg-slate-50 border border-gray-200 text-sm rounded-md py-2 pl-5 pr-4 w-64 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all"
+            />
+          </div>
+
+          <button
+            class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-md transition-colors">
+            +New Issue
+          </button>
+        </div>
+      </div>
+    </nav>
+<!-- btn or  Iscsues section   -->
+<div class="max-w-7xl mx-auto px-4 py-6 space-y-4">
     
-</body>
+    <div class="bg-white p-3 rounded-lg border border-gray-100 shadow-sm">
+        <div class="flex gap-2 p-4">
+            <button class="btn btn-sm bg-[#6322FF] hover:bg-[#521ee0] text-white border-none px-8 normal-case">All</button>
+            <button class="btn btn-sm btn-ghost text-gray-500 hover:bg-gray-100 px-8 border border-gray-100 normal-case">Open</button>
+            <button class="btn btn-sm btn-ghost text-gray-500 hover:bg-gray-100 px-8 border border-gray-100 normal-case">Closed</button>
+        </div>
+    </div>
+
+    <div class="bg-white p-5 rounded-t-xl border border-gray-100 shadow-sm flex items-center justify-between">
+        
+        <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-indigo-50 text-[#6322FF] rounded-full flex items-center justify-center">
+              <img src="/assets/Aperture.png" alt="">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-slate-800 leading-none"><span>50</span> Issues</h2>
+                <p class="text-sm text-slate-400 mt-1">Track and manage your project issues</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 bg-emerald-400 rounded-full"></span>
+                <span class="text-sm font-medium text-slate-600">Open</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-[10px] h-[10px] bg-purple-500 rounded-full"></span>
+                <span class="text-sm font-medium text-slate-600">Closed</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- card section  -->
+ <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div id="all-img" class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+            
+            <div class="h-1.5 bg-emerald-400 w-full"></div> 
+            
+            <div class="p-5">
+                <div class="flex justify-between items-center mb-3">
+                    <div class=" bg-emerald-50 p-1.5 rounded-lg">
+                      <img src="/assets/Open-Status.png" alt="">
+                    </div>
+                    <span class="badge badge-sm bg-red-50 text-red-500 border-red-100 font-bold px-3 py-2 uppercase text-[10px]">High</span>
+                </div>
+
+                <h3 class="font-bold text-slate-800 text-sm mb-2 leading-tight">
+                    Fix Navigation Menu On Mobile Devices
+                </h3>
+                <p class="text-xs text-slate-400 mb-4 line-clamp-2">
+                    The navigation menu doesn't collapse properly on mobile devices...
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="badge badge-outline border-red-200 text-red-400 text-[10px] font-bold px-2 py-2 uppercase">
+                        🔴 BUG
+                    </span>
+                    <span class="badge badge-outline border-orange-200 text-orange-400 text-[10px] font-bold px-2 py-2 uppercase">
+                        🤝 HELP WANTED
+                    </span>
+                </div>
+
+                <div class="pt-4 border-t border-gray-50 flex flex-col gap-1">
+                    <p class="text-[11px] text-slate-400 font-medium italic">#1 by john_doe</p>
+                    <p class="text-[11px] text-slate-400">1/15/2024</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="home.js"></script>
+  </body>
 </html>
