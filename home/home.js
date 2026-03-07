@@ -176,3 +176,29 @@ const displaydetails = (data) => {
 
   `;
 };
+
+
+
+
+
+// Search 
+const searchIssue = async (text) => {
+  manageLoading(true);
+
+  const res = await fetch(
+    `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${text}`,
+  );
+
+  const data = await res.json();
+
+  displayimg(data.data);
+};
+document.getElementById("input-search").addEventListener("keyup", (e) => {
+  const value = e.target.value;
+
+  if (value === "") {
+    displayimg(allIssues); 
+  } else {
+    searchIssue(value);
+  }
+});
