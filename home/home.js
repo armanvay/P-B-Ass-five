@@ -150,7 +150,7 @@ const displaydetails = (data) => {
               (label) => `
                  <span class="badge badge-outline bg-[#FECACA] border-red-200 text-red-400 text-[10px] font-bold px-2 py-1 uppercase">
                ${label}
-               </span>
+               </span> 
   `,
             )
             .join("")}
