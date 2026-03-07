@@ -34,7 +34,7 @@ const displayimg = (data) => {
         <div class="p-5">
             <div class="flex justify-between items-center mb-3">
                 <div class=" ">
-                  ${datas.status === "open" ? ` <img src="/assets/Open-Status.png" alt="">` : ` <img src="/assets/Closed- Status .png" alt="">`}  
+                  ${datas.status === "open" ? ` <img src="../assets/Open-Status.png" alt="">` : ` <img src="../assets/Closed- Status .png" alt="">`}  
                 </div>
                 <span class="badge badge-sm  bg-red-50 text-red-500 border-red-100 font-bold px-3 py-2 uppercase text-[10px]">${datas.priority}</span>
             </div>
