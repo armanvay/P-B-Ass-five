@@ -45,6 +45,7 @@
         <div class="flex items-center gap-4">
           <div class="sm:block">
             <input
+            id="input-search"
               type="text"
               placeholder="Search issues..."
               class="bg-slate-50 border border-gray-200 text-sm rounded-md py-2 pl-5 pr-4 w-64 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all"
@@ -52,6 +53,7 @@
           </div>
 
           <button
+          id="btn-search"
             class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-md transition-colors"
           >
             +New Issue
@@ -128,6 +130,25 @@
             <span class="loading loading-spinner loading-xl"></span>
          </div>
     </div>
+    <!-- showmodal  -->
+     <section>
+        <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="word_modal" class="modal">
+  <div class="modal-box">
+     <div id="detils-continer" class="space-y-2">
+<!-- modal digaln  -->
+ </div>
+
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-primary">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+     </section>
     <script src="home.js"></script>
   </body>
 </html>
