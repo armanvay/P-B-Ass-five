@@ -29,7 +29,7 @@ const displayimg = (data) => {
   data.forEach((datas) => {
     const creatediv = document.createElement("div");
     creatediv.innerHTML = `
-      <div onclick="cardDittels(${datas.id})" class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
+      <div onclick="cardDittels(${datas.id})" class="bg-white rounded-xl border border-gray-100 h-[300px] shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
         <div class=" ${datas.status === "open" ? ` h-1.5 bg-green-500` : ` h-1.5 bg-[#A855F7]`} w-full"></div> 
         <div class="p-5">
             <div class="flex justify-between items-center mb-3">
